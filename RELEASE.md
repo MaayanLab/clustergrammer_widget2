@@ -1,3 +1,21 @@
+- My notes 3-14-2018
+
+## https://stackoverflow.com/questions/45207128/failed-to-upload-packages-to-pypi-410-gone
+
+Upgrade to the very latest pip and setuptools; install twine:
+
+pip install -U pip setuptools twine
+Edit ~/.pypirc and comment out or remove repository:
+
+[pypi]
+#repository:https://pypi.python.org/pypi
+Use twine to upload your module to pypi from within the folder containing the module source, setup.py, and other files:
+
+python setup.py sdist
+twine upload dist/*
+See https://packaging.python.org/guides/migrating-to-pypi-org/#uploading
+
+
 - To release a new version of clustergrammer_widget2 on PyPI:
 
 Update _version.py (set release version, remove 'dev')
