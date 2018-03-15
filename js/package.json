@@ -29,7 +29,10 @@
   },
   "dependencies": {
     "@jupyter-widgets/base": "^1.0.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "clustergrammer": "v1.19.5",
+    "d3": "^3.5.8",
+    "underscore": "^1.8.3"
   },
   "jupyterlab": {
     "extension": "lib/labplugin"
