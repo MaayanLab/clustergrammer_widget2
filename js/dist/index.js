@@ -1,4 +1,4 @@
-define(["@jupyter-widgets/base"], function(__WEBPACK_EXTERNAL_MODULE_2__) { return /******/ (function(modules) { // webpackBootstrap
+define(["@jupyter-widgets/base"], function(__WEBPACK_EXTERNAL_MODULE_3__) { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -75,15 +75,15 @@ define(["@jupyter-widgets/base"], function(__WEBPACK_EXTERNAL_MODULE_2__) { retu
 
 // Export widget models and views, and the npm package version number.
 module.exports = __webpack_require__(1);
-module.exports['version'] = __webpack_require__(6).version;
+module.exports['version'] = __webpack_require__(2).version;
 
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var widgets = __webpack_require__(2);
-var _ = __webpack_require__(3);
+var widgets = __webpack_require__(3);
+var _ = __webpack_require__(4);
 
 
 // Custom Model. Custom widgets models must at least provide default values
@@ -137,10 +137,16 @@ module.exports = {
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+module.exports = {"name":"clustergrammer_widget2","version":"0.1.0","description":"Interactive heatmap built using WebGL","author":"Nicolas Fernandez","main":"lib/index.js","repository":{"type":"git","url":"https://github.com/maayanlab/clustergrammer_widget2.git"},"keywords":["jupyter","widgets","ipython","ipywidgets"],"files":["lib/**/*.js","dist/*.js"],"scripts":{"clean":"rimraf dist/","prepublish":"webpack","test":"echo \"Error: no test specified\" && exit 1"},"devDependencies":{"webpack":"^3.5.5","rimraf":"^2.6.1"},"dependencies":{"@jupyter-widgets/base":"^1.0.0","lodash":"^4.17.4","clustergrammer":"v1.19.5","d3":"^3.5.8","underscore":"^1.8.3"},"jupyterlab":{"extension":"lib/labplugin"}}
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -17242,10 +17248,10 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(5)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(6)(module)))
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 var g;
@@ -17272,7 +17278,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -17298,12 +17304,6 @@ module.exports = function(module) {
 	return module;
 };
 
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-module.exports = {"name":"clustergrammer_widget2","version":"0.1.0","description":"Interactive heatmap built using WebGL","author":"Nicolas Fernandez","main":"lib/index.js","repository":{"type":"git","url":"https://github.com/maayanlab/clustergrammer_widget2.git"},"keywords":["jupyter","widgets","ipython","ipywidgets"],"files":["lib/**/*.js","dist/*.js"],"scripts":{"clean":"rimraf dist/","prepublish":"webpack","test":"echo \"Error: no test specified\" && exit 1"},"devDependencies":{"webpack":"^3.5.5","rimraf":"^2.6.1"},"dependencies":{"@jupyter-widgets/base":"^1.0.0","lodash":"^4.17.4","clustergrammer":"v1.19.5","d3":"^3.5.8","underscore":"^1.8.3"},"jupyterlab":{"extension":"lib/labplugin"}}
 
 /***/ })
 /******/ ])});;
