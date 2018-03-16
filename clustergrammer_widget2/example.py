@@ -1,6 +1,7 @@
 import ipywidgets as widgets
 from traitlets import Unicode
 
+print('example.py \n---------------------')
 @widgets.register
 class HelloWorld(widgets.DOMWidget):
     """An example widget."""
