@@ -4,6 +4,7 @@ var _ = require('underscore');
 var d3 = require('d3');
 var cgm_fun = require('clustergrammer');
 
+// version 0.2.0
 
 // Custom Model. Custom widgets models must at least provide default values
 // for model attributes, including

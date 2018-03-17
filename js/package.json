@@ -1,6 +1,6 @@
 {
   "name": "clustergrammer_widget2",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Interactive heatmap built using WebGL",
   "author": "Nicolas Fernandez",
   "main": "lib/index.js",
