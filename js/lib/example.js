@@ -1,5 +1,8 @@
 var widgets = require('@jupyter-widgets/base');
 var _ = require('lodash');
+var _ = require('underscore');
+var d3 = require('d3');
+var cgm_fun = require('clustergrammer');
 
 
 // Custom Model. Custom widgets models must at least provide default values
@@ -25,7 +28,8 @@ var HelloModel = widgets.DOMWidgetModel.extend({
         _view_module : 'clustergrammer_widget2',
         _model_module_version : '0.1.0',
         _view_module_version : '0.1.0',
-        value : 'Hello World'
+        value : 'Hello World',
+        network: ''
     })
 });
 
@@ -44,6 +48,60 @@ var HelloView = widgets.DOMWidgetView.extend({
     }
 });
 
+function render_function() {
+
+  // generate unique id for each visualization
+  var viz_number = String(Math.round(Math.random()*10000));
+  var container_name = 'cgm_notebook_' + String(viz_number) ;
+  if (d3.select('#'+container_name).empty() === false){
+    var backup_number = String(Math.round(Math.random()*10000));
+    container_name = container_name + backup_number;
+  }
+
+  // widget-subarea appears to be limited to a width of ~960px in nbviewer
+  d3.select(this.el)
+      .append('div')
+      .classed('clustergrammer_widget', true)
+      .attr('id', container_name)
+      .style('width', '975px')
+      .style('height', '800px');
+
+  var inst_network_string = this.model.get('network');
+
+  inst_network = JSON.parse(inst_network_string);
+
+  var about_string = "<a href='http://clustergrammer.readthedocs.io/clustergrammer_widget.html' target='_blank' ><img src='http://amp.pharm.mssm.edu/clustergrammer/static/img/clustergrammer_logo.png' style='width:130px; margin-left:-5px' alt='clustergrammer'></a>";
+
+  var hzome = ini_hzome();
+
+  // cgm_model needs to be global
+  cgm_model = this;
+
+  var container_id = '#'+container_name;
+  // define arguments object
+  var args = {
+      root: container_id,
+      'network_data': inst_network,
+      'about':about_string,
+      'row_tip_callback':hzome.gene_info,
+      'matrix_update_callback':matrix_update_callback,
+      'cat_update_callback': cat_update_callback,
+      'sidebar_width':135,
+  };
+
+  setTimeout(make_viz, 10, args);
+
+}
+
+function make_viz(args){
+
+  cgm = cgm_fun(args);
+
+  // check_setup_enrichr(cgm);
+
+  console.log('DO NOT UPDATE MATRIX STRING WHEN MAKING VIZ')
+
+}
 
 module.exports = {
     HelloModel : HelloModel,
