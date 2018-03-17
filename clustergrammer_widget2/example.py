@@ -8,7 +8,7 @@ print('example.py \n---------------------')
 # print(Network)
 
 @widgets.register
-class HelloWorld(widgets.DOMWidget):
+class clustergrammer_widget2(widgets.DOMWidget):
     """An example widget."""
     _view_name = Unicode('HelloView').tag(sync=True)
     _model_name = Unicode('HelloModel').tag(sync=True)
