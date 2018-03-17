@@ -57,7 +57,7 @@ define(["@jupyter-widgets/base"], function(__WEBPACK_EXTERNAL_MODULE_3__) { retu
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "https://unpkg.com/clustergrammer_widget2@0.2.0/dist/";
+/******/ 	__webpack_require__.p = "https://unpkg.com/clustergrammer_widget2@0.3.0/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 1);
@@ -9674,8 +9674,8 @@ var HelloModel = widgets.DOMWidgetModel.extend({
         _view_name : 'HelloView',
         _model_module : 'clustergrammer_widget2',
         _view_module : 'clustergrammer_widget2',
-        _model_module_version : '0.1.0',
-        _view_module_version : '0.1.0',
+        _model_module_version : '0.3.0',
+        _view_module_version : '0.3.0',
         value : 'Hello World',
         network: ''
     })
@@ -58754,7 +58754,7 @@ module.exports =
 /* 9 */
 /***/ (function(module, exports) {
 
-module.exports = {"name":"clustergrammer_widget2","version":"0.2.0","description":"Interactive heatmap built using WebGL","author":"Nicolas Fernandez","main":"lib/index.js","repository":{"type":"git","url":"https://github.com/maayanlab/clustergrammer_widget2.git"},"keywords":["jupyter","widgets","ipython","ipywidgets"],"files":["lib/**/*.js","dist/*.js"],"scripts":{"clean":"rimraf dist/","prepublish":"webpack","test":"echo \"Error: no test specified\" && exit 1"},"devDependencies":{"webpack":"^3.5.5","rimraf":"^2.6.1"},"dependencies":{"@jupyter-widgets/base":"^1.0.0","lodash":"^4.17.4","clustergrammer":"v1.19.5","d3":"^3.5.8","underscore":"^1.8.3"},"jupyterlab":{"extension":"lib/labplugin"}}
+module.exports = {"name":"clustergrammer_widget2","version":"0.3.0","description":"Interactive heatmap built using WebGL","author":"Nicolas Fernandez","main":"lib/index.js","repository":{"type":"git","url":"https://github.com/maayanlab/clustergrammer_widget2.git"},"keywords":["jupyter","widgets","ipython","ipywidgets"],"files":["lib/**/*.js","dist/*.js"],"scripts":{"clean":"rimraf dist/","prepublish":"webpack","test":"echo \"Error: no test specified\" && exit 1"},"devDependencies":{"webpack":"^3.5.5","rimraf":"^2.6.1"},"dependencies":{"@jupyter-widgets/base":"^1.0.0","lodash":"^4.17.4","clustergrammer":"v1.19.5","d3":"^3.5.8","underscore":"^1.8.3"},"jupyterlab":{"extension":"lib/labplugin"}}
 
 /***/ })
 /******/ ])});;

@@ -27,8 +27,8 @@ var HelloModel = widgets.DOMWidgetModel.extend({
         _view_name : 'HelloView',
         _model_module : 'clustergrammer_widget2',
         _view_module : 'clustergrammer_widget2',
-        _model_module_version : '0.1.0',
-        _view_module_version : '0.1.0',
+        _model_module_version : '0.3.0',
+        _view_module_version : '0.3.0',
         value : 'Hello World',
         network: ''
     })
