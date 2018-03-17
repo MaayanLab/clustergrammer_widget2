@@ -123,12 +123,18 @@ var HelloModel = widgets.DOMWidgetModel.extend({
 
 // Custom View. Renders the widget model.
 var HelloView = widgets.DOMWidgetView.extend({
-    render: function() {
-        console.log('example.js *************');
-        console.log('--------------');
-        this.value_changed();
-        this.model.on('change:value', this.value_changed, this);
-    },
+
+    // render: function() {
+    //     console.log('example.js *************');
+    //     console.log('--------------');
+
+    //     render_function();
+
+    //     this.value_changed();
+    //     this.model.on('change:value', this.value_changed, this);
+    // },
+
+    render: render_function,
 
     value_changed: function() {
         this.el.textContent = this.model.get('value');
@@ -157,22 +163,25 @@ function render_function() {
 
   inst_network = JSON.parse(inst_network_string);
 
+  console.log(inst_network)
+
   var about_string = "<a href='http://clustergrammer.readthedocs.io/clustergrammer_widget.html' target='_blank' ><img src='http://amp.pharm.mssm.edu/clustergrammer/static/img/clustergrammer_logo.png' style='width:130px; margin-left:-5px' alt='clustergrammer'></a>";
 
-  var hzome = ini_hzome();
+  // var hzome = ini_hzome();
 
   // cgm_model needs to be global
   cgm_model = this;
 
   var container_id = '#'+container_name;
+
   // define arguments object
   var args = {
       root: container_id,
       'network_data': inst_network,
-      'about':about_string,
-      'row_tip_callback':hzome.gene_info,
-      'matrix_update_callback':matrix_update_callback,
-      'cat_update_callback': cat_update_callback,
+      // 'about':about_string,
+      // 'row_tip_callback':hzome.gene_info,
+      // 'matrix_update_callback':matrix_update_callback,
+      // 'cat_update_callback': cat_update_callback,
       'sidebar_width':135,
   };
 
