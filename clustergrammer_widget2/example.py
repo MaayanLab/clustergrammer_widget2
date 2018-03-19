@@ -4,7 +4,8 @@ import json
 from . import clustergrammer
 Network = clustergrammer.Network
 
-# version 0.2.0
+# version 0.3.0
+print('version 0.3.0')
 
 print('example.py \n---------------------')
 # print(Network)

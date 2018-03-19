@@ -3,6 +3,14 @@ var _ = require('lodash');
 var _ = require('underscore');
 var d3 = require('d3');
 var cgm_fun = require('clustergrammer');
+var cgm2 = require('clustergrammer2-alpha');
+
+console.log(cgm2);
+
+// var ini_hzome = require('./hzome_functions');
+// var Enrichrgram = require('./Enrichrgram');
+// var url = require("file-loader!./clustergrammer_logo.png");
+// require('!style!css!./custom.css');
 
 // version 0.2.0
 
